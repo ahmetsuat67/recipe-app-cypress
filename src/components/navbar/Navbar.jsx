@@ -21,7 +21,7 @@ const Navbar = () => {
       <Menu hamburOpen={isOpen}>
         <MenuLink to="/about" onClick={()=>setIsOpen(!isOpen)}>About</MenuLink>
         
-        <A href="https://github.com/" target="_blank">
+        <A  href="https://github.com/" target="_blank">
           Github
         </A>
         
