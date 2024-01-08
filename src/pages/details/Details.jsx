@@ -14,29 +14,29 @@ const Details = () => {
       </HeaderContainer> 
       <DetailPart>
         <OtherPart>
-        <>Nutrients</>
-          <p>
+        <h6 data-test="contentHeader">Nutrients</h6>
+          <p data-test="contentParag">
             {recipeDet.totalNutrients.CA.label} :
             {Math.round(recipeDet.totalNutrients.CA.quantity)}
             {recipeDet.totalNutrients.CA.unit}
           </p>
-          <p>
+          <p data-test="contentParag">
             {recipeDet.totalNutrients.CHOCDF.label} :
             {Math.round(recipeDet.totalNutrients.CHOCDF.quantity)}
             {recipeDet.totalNutrients.CHOCDF.unit}
           </p>
-          <p>
+          <p data-test="contentParag">
             {recipeDet.totalNutrients.CHOLE.label} :{" "}
             {Math.round(recipeDet.totalNutrients.CHOLE.quantity)}
             {recipeDet.totalNutrients.CHOLE.unit}
           </p>
-          <p>
+          <p data-test="contentParag">
             {recipeDet.totalNutrients.ENERC_KCAL.label} :{" "}
             {Math.round(recipeDet.totalNutrients.ENERC_KCAL.quantity)}
             {recipeDet.totalNutrients.ENERC_KCAL.unit}
           </p>
-          <p>{recipeDet.totalWeight}</p>
-          <p>Calories: {Math.round(recipeDet.calories)}</p>
+          <p data-test="contentParag">{recipeDet.totalWeight}</p>
+          <p data-test="contentCal">Calories: {Math.round(recipeDet.calories)}</p>
           {recipeDet.digest.slice(0, 4).map((item, index) => (
             <p key={index}>
               {item.label} : {Math.round(item.total)}
@@ -44,7 +44,7 @@ const Details = () => {
           ))}
         </OtherPart>
         <ImgContainer>
-            <img src={recipeDet.image} alt={recipeDet.label} />
+            <img data-test="contentImage" src={recipeDet.image} alt={recipeDet.label} />
         </ImgContainer>
         <IngredContainer>
         

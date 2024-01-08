@@ -11,6 +11,10 @@ describe('recipe project', () => {
         cy.get("[data-test='cardImage']").should("be.visible")
         cy.get("[data-test='cardBtn']").should("be.visible").first().click({ force: true });
         cy.url().should("include", "/details");
+        cy.get("[data-test='contentHeader']").should("be.visible")
+        cy.get("[data-test='contentParag']").should("be.visible")
+        cy.get("[data-test='contentCal']").should("be.visible")
+        cy.get("[data-test='contentImage']").should("be.visible")
 
     })
 
