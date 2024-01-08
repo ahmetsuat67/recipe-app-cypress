@@ -32,3 +32,10 @@ Cypress.Commands.add("login", () => {
     cy.get('[data-test="loginSbmt"]').should('be.visible').click({ force: true })
     cy.url().should('include', '/home')
 });
+// token ile giriş 
+// Cypress.Commands.add("token", () => {
+//     cy.setCookie(
+//       "user_token",
+//       "eyJIjoxNjgzMDQwNTk2LCJpYXQiOjE2ODA0NDg1OTYsImp0aSI6IjNhZTg1ODUzNTM5NjRhMTU4Zl9pZCI6ODJ9.A83lDwnt55ugj_LrwXBNHAa7zAN7JvclBJW-VHhnZMo"
+//     );
+// }); 

@@ -38,7 +38,7 @@ const Details = () => {
           <p data-test="contentParag">{recipeDet.totalWeight}</p>
           <p data-test="contentCal">Calories: {Math.round(recipeDet.calories)}</p>
           {recipeDet.digest.slice(0, 4).map((item, index) => (
-            <p key={index}>
+            <p data-test={item.label+"test"} key={index}>
               {item.label} : {Math.round(item.total)}
             </p>
           ))}
@@ -49,7 +49,7 @@ const Details = () => {
         <IngredContainer>
         
           {recipeDet.ingredientLines.map((item, index) => (
-            <p key={index}>{index+1}. - {item}</p>
+            <p data-test={item+"test"} key={index}>{index+1}. - {item}</p>
             
           ))}
         
