@@ -8,24 +8,24 @@ const Navbar = () => {
   
   return (
     <Nav>
-      <Logo onClick={()=>setIsOpen(false)} to="/home">
+      <Logo data-test="homeLogo" onClick={()=>setIsOpen(false)} to="/home">
         <i>{`<Clarusway/>`}</i>
         <span >recipe</span>
       </Logo>
       
-      <Hamburger onClick={()=>setIsOpen(!isOpen)}>
+      <Hamburger data-test="homeHamburger" onClick={()=>setIsOpen(!isOpen)}>
         <span/>
         <span/>
         <span/>
       </Hamburger>
       <Menu hamburOpen={isOpen}>
-        <MenuLink to="/about" onClick={()=>setIsOpen(!isOpen)}>About</MenuLink>
+        <MenuLink data-test="homeAbout" to="/about" onClick={()=>setIsOpen(!isOpen)}>About</MenuLink>
         
-        <A  href="https://github.com/" target="_blank">
+        <A data-test="homeGithub" href="https://github.com/" target="_blank">
           Github
         </A>
         
-        <MenuLink onClick={()=>setIsOpen(!isOpen)} onMouseUp={()=>sessionStorage.clear()} to="/">LOGOUT</MenuLink>
+        <MenuLink data-test="homeLogout" onClick={()=>setIsOpen(!isOpen)} onMouseUp={()=>sessionStorage.clear()} to="/">LOGOUT</MenuLink>
       </Menu> 
     </Nav>
   )

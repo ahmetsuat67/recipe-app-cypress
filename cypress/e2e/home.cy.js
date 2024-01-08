@@ -5,7 +5,11 @@ describe('recipe project', () => {
   })
     it('login', () => {
       cy.login() 
-  
+      
+      cy.get("[data-test='homeAbout']").contains("About").should("be.visible").click({ force: true });
+      cy.url().should("include", "/about");
+      cy.get("[data-test='homeLogo']").contains("<Clarusway/>").should("be.visible").click({ force: true });
+      cy.url().should("include", "/home");
     })
    
   })
