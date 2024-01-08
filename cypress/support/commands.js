@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
 Cypress.Commands.add("login", () => {
     cy.url().should('include', '/')
     cy.get('[data-test="loginHeader"]').contains("<Clarusway/>").should('be.visible')
