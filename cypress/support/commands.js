@@ -39,3 +39,4 @@ Cypress.Commands.add("login", () => {
 //       "eyJIjoxNjgzMDQwNTk2LCJpYXQiOjE2ODA0NDg1OTYsImp0aSI6IjNhZTg1ODUzNTM5NjRhMTU4Zl9pZCI6ODJ9.A83lDwnt55ugj_LrwXBNHAa7zAN7JvclBJW-VHhnZMo"
 //     );
 // }); 
+// cy.token() diyerek loginsiz giriş yapabiliriz.
